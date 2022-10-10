@@ -19,7 +19,7 @@ const url = oauth2Client.generateAuthUrl({
     include_granted_scopes: true
   });
 app.use(express.json())
-app.get("/auth",(req,res)=>{ 
+app.get("/rest/v1/calendar/init/",(req,res)=>{ 
      res.redirect(url);
 })
 app.get("/rest/v1/calendar/redirect/",async(req,res)=>{
